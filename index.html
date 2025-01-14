@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-card">
+            <div class="main-info">
+                <div class="location-container">
+                    <span class="location-icon">📍</span>
+                    <div class="location" id="location">Chennai</div>
+                    <div class="date-time" id="date-time">--</div>
+                </div>
+                <div class="temperature-container">
+                    <div class="temperature" id="temperature">--°C</div>
+                    <div class="feels-like" id="feels-like">Feels like: --°C</div>
+                </div>
+                <div class="weather-main">
+                    <div class="emoji" id="emoji">🌤</div>
+                    <div class="description" id="description">--</div>
+                </div>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-item">
+                    <span class="detail-icon">💧</span>
+                    <div class="detail-label">Humidity</div>
+                    <div class="detail-value" id="humidity">--%</div>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">💨</span>
+                    <div class="detail-label">Wind Speed</div>
+                    <div class="detail-value" id="wind-speed">-- km/h</div>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">🌡️</span>
+                    <div class="detail-label">Pressure</div>
+                    <div class="detail-value" id="pressure">-- hPa</div>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">🌅</span>
+                    <div class="detail-label">Sunrise</div>
+                    <div class="detail-value" id="sunrise">--:--</div>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">🌇</span>
+                    <div class="detail-label">Sunset</div>
+                    <div class="detail-value" id="sunset">--:--</div>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">👁️</span>
+                    <div class="detail-label">Visibility</div>
+                    <div class="detail-value" id="visibility">-- km</div>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">🌪️</span>
+                    <div class="detail-label">Wind Direction</div>
+                    <div class="detail-value" id="wind-direction">--°</div>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">☁️</span>
+                    <div class="detail-label">Cloudiness</div>
+                    <div class="detail-value" id="cloudiness">--%</div>
+                </div>
+            </div>
+
+            <div class="forecast" id="forecast">
+                <!-- Hourly forecast will be inserted here -->
+            </div>
+        </div>
+        
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search for a location">
+            <button id="searchBtn">🔍 Search</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

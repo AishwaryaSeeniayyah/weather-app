@@ -1,0 +1,289 @@
+/* Enhanced CSS */
+body {
+    font-family: 'San Francisco', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #f8f9fa);
+    transition: all 0.8s ease;
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    margin-bottom: 25px;
+    animation: fadeIn 0.8s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-info {
+    position: relative;
+    padding: 20px;
+}
+
+.location {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.temperature {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin: 15px 0;
+    background: linear-gradient(45deg, #1a1a1a, #4a4a4a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.emoji {
+    font-size: 4em;
+    margin: 15px 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+.description {
+    font-size: 1.4em;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.details div {
+    font-size: 1.1em;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.details div:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#search {
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#searchBtn {
+    padding: 15px 25px;
+    font-size: 1.1em;
+    background: linear-gradient(45deg, #007BFF, #00C6FF);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+#searchBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+/* Enhanced responsive CSS */
+:root {
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --primary-color: #007BFF;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666;
+}
+
+body {
+    font-family: 'San Francisco', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #f8f9fa);
+    transition: all 0.8s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.weather-card {
+    background: var(--card-bg);
+    border-radius: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+.location-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.location-icon {
+    font-size: 1.5em;
+}
+
+.date-time {
+    font-size: 1.1em;
+    color: var(--text-secondary);
+}
+
+.temperature-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.weather-main {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.detail-item {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detail-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.detail-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.detail-label {
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+}
+
+.detail-value {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.forecast {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.forecast-item {
+    flex: 0 0 auto;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    text-align: center;
+    min-width: 100px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .weather-card {
+        padding: 20px;
+    }
+
+    .details-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .temperature {
+        font-size: 2.5em;
+    }
+
+    .location {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .details-grid {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 10px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    #searchBtn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+/* Responsive Design */ @media (max-width: 768px) { body { padding: 10px; } .container { padding: 10px; } .weather-card { padding: 20px; } .details-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; } .temperature { font-size: 2.5em; } .location { font-size: 1.8em; } } @media (max-width: 480px) { body { padding: 5px; } .details-grid { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; } .search-box { flex-direction: column; } #searchBtn { width: 100%; margin-top: 10px; } } 
